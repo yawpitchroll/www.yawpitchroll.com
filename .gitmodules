@@ -1,0 +1,3 @@
+[submodule "themes/ample"]
+	path = themes/ample
+	url = https://github.com/yawpitchroll/ample.git
