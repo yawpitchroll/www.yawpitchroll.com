@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Ample</title>
+    <link>http://example.org/page/</link>
+    <description>Recent content in Pages on Ample</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Apr 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/page/about/</link>
+      <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/page/about/</guid>
+      <description>Confusion in her eyes says it all&amp;hellip; she&amp;rsquo;s lost control.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://example.org/page/contact/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/page/contact/</guid>
+      <description>You can find me on:
+ Facebook LinkedIn  </description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>http://example.org/page/links/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/page/links/</guid>
+      <description>Some Links to Check Out&amp;hellip;
+Official Hugo Website: Hugo is what I used to build this site.
+Blogdown Github Page: Awesome tool by Yihui Xie that makes it super easy to create Hugo pages using R Markdown directly from R Studio.
+Official R Studio Website: Free and open-source IDE for R. Includes everything you need for R-Markdown.
+R for Data Science (Grolemund, Wickham): Official website for Garrett Grolemund and Hadley Wickham&amp;rsquo;s awesome book.</description>
+    </item>
+    
+  </channel>
+</rss>
