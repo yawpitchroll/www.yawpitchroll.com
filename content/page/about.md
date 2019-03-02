@@ -1,15 +1,18 @@
 +++
 title = "About"
-description = "About this site..."
+description = "About Ample"
 date = "2015-04-07"
-author = "Yudy Chen"
 disable_comments = true
 disableComments = true
 nav_off = true
 [menu.main]
 name = "About"
-pre = "<i class='fa fa-user fa-fw'></i>"
 weight = 3
 +++
+# ample
 
-Confusion in her eyes says it all... she's lost control.
+### _a minimal amp-compatible hugo theme_
+
+**Ample** is a minimal AMP-compatible Hugo theme based on [Xmin](https://xmin.yihui.name/) by [Yihui Xie](https://yihui.name). In the spirit of Xmin, this theme does not use any javascript or use any complex css like bootstrap. However, several changes were made to the layout and features available in this theme. 
+
+As with Xmin, it is fully functional. It supports pages (including the home page), blog posts, a navigation menu, categories, tags, and RSS.

@@ -1,3 +1,7 @@
 [submodule "themes/ample"]
-	path = themes/ample
-	url = https://github.com/yawpitchroll/ample.git
+    path = themes/ample
+    url = git@github.com:yawpitchroll/ample.git
+[submodule "public"]
+	path = public
+	url = git@github.com:yawpitchroll/yawpitchroll.github.io.git
+	branch = master

@@ -1,27 +1,98 @@
-baseURL = "http://example.org/"
+baseURL = "https://yawpitchroll.github.io/"
 languageCode = "en-us"
 title = "Ample"
 theme = "ample"
 googleAnalytics = ""
 disqusShortname = "spork"
-pygmentsCodeFences = true
 
-# pygmentsCodeFencesGuessSyntax IS VERY BUGGY
-#pygmentsCodeFencesGuessSyntax = true
-#pygmentsStyle = "solarized-dark"
-#pygmentsOptions = "linenos=table"
-pygmentsUseClasses = true
 enableEmoji = true
 footnoteReturnLinkContents = "↑"
 
-paginate = 1
+copyright = "" # leave this blank to use the smart copyright in params.ample.copyright
+
+
+# syntax highlighting
+pygmentsCodeFences = true  # recommend True: enables Github-style code fences
+pygmentsCodeFencesGuessSyntax = false # recommend False: has never worked properly 
+pygmentsStyle = "" # recommend ""; will be ignored by Ample at any rate
+#pygmentsOptions = "linenos=table" # leave disabled unless you _always_ want linenos
+pygmentsUseClasses = true # recommend True: required for Ample syntax highlighting themes
+
+paginate = 5
 
 [permalinks]
     post = "/post/:slug/"
 
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+
+[[related.indices]]
+  name = "keywords"
+  weight = 100
+
+[[related.indices]]
+  name = "tags"
+  weight = 80
+
+[[related.indices]]
+  name = "date"
+  weight = 10
+
+[params]
+    description = "A minimal AMP-compatible Hugo website"
+    post_navigation = true
+
+[params.ample.site]
+    googleSiteVerificationID = "sBH5B-K8H5X_W-rkdiyd0K9FmhQLiqbEbGcrpEOUeTk"
+
+[params.ample.style]
+    syntaxHighlightMode = "" # choices are "light" and "dark", defaults to "light"
+    accentColor = "" # defaults to "#0379C4" 
+
+[params.ample.pages.home]
+    title = "" # defaults to "Home"
+    text = "" # defaults to "Enter"
+    link = "" # root link to return to, defaults to "posts" so /posts
+
+[params.ample.pages.e404]
+    title = "" # defaults to .Title (ie "404 Page not found")
+    text = "" # defaults to "404, So Sorry"
+    link = "" # root link to return to, defaults to "posts" so /posts
+
+[params.ample.copyright]
+    start = "" # if not provided, current year only will be used, else {start}-{current}
+    rights = "" # defaults to "All Rights Reserved"
+    holder = "" # name of the copyright holder; no default value
+
+[params.ample.seo.facebook]
+    appid = "169846159809380"
+    admins = []
+
+[params.ample.author]
+    displayName = "Michael Morehouse"
+
+[params.ample.author.social]
+    email = "yawpitch@yawpitchroll.com"
+    facebook = "yawpitch"
+    github = "yawpitch"
+    twitter = "yawpitchroll"
+    linkedin = "yawpitchroll"
+    reddit = "yawpitch"
+
+[params.ample.publisher.social]
+    facebook = "" # defaults to params.ample.author.social.facebook
+
+# Menu items for the top navbar and mobile-only sidebar
 [[menu.main]]
-    name = "Home"
-    url = "/"
+    name = "Posts"
+    url = "/posts"
     weight = 1
 
 [[menu.main]]
@@ -34,50 +105,40 @@ paginate = 1
     url = "/tags/"
     weight = 2
 
-[params]
-    description = "A minimal AMP-compatible Hugo website"
-    post_navigation = true
-    footer = "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io/) and [Ample](https://github.com/yawpitchroll/ample)"
-
-[params.ample]
-    syntaxStyle = "" # default choices are "light" and "dark"
-
-# Social icons to be shown on the right-hand side of the navigation bar
-# The "name" field should match the name of the icon to be used
-# The list of available icons can be found at http://fontawesome.io/icons/
-
-[[menu.icon]]
-    url = "mailto:me@example.com"
-    name = "envelope-square-solid"
-    title = "Send an email"
+[[params.ample.social.links]]
+    name = "github"
     weight = 1
 
-[[menu.icon]]
-    url = "https://github.com/username/"
-    name = "github-square-brands"
-    title = "Connect on Github"
+[[params.ample.social.links]]
+    name = "twitter"
     weight = 2
 
-[[menu.icon]]
-    url = "https://twitter.com/username/"
-    name = "twitter-square-brands"
-    title = "Connect on Twitter"
+[[params.ample.social.links]]
+    name = "linkedin"
     weight = 3
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/user-name-a123456789/"
-    name = "linkedin-brands"
-    title = "Connect on LinkedIn"
+[[params.ample.social.links]]
+    name = "facebook"
     weight = 4
 
-[[menu.icon]]
-    url = "https://www.facebook.com/username/"
-    name = "facebook-square-brands"
-    title = "Connect on Facebook"
+[[params.ample.social.links]]
+    name = "reddit"
     weight = 5
 
-[[menu.icon]]
-    url = "https://www.reddit.com/user/username/"
-    name = "reddit-square-brands"
-    title = "Connect on Reddit"
-    weight = 6
+[[params.ample.social.share]]
+    provider = "facebook"
+    id = "169846159809380"
+    weight = 1
+
+[[params.ample.social.share]]
+    provider = "twitter"
+    weight = 2
+    
+[[params.ample.social.share]]
+    provider = "linkedin"
+    weight = 3
+
+[[params.ample.social.share]]
+    provider = "whatsapp"
+    weight = 4
+
