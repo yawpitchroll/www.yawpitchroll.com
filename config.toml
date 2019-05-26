@@ -1,144 +1,191 @@
+## BASIC SITE CONFIGURATION
 baseURL = "https://yawpitchroll.github.io/"
-languageCode = "en-us"
-title = "Ample"
-theme = "ample"
-googleAnalytics = ""
-disqusShortname = "spork"
+theme = "frugal"
+defaultContentLanguage = "en"
 
+
+## ANALYTICS CONFIGURATION
+googleAnalytics = "UA-30240801-1"
+
+
+## SYNTAX HIGHLIGHTING CONFIGURATION
+pygmentsUseClasses = true                   # must be true; enabled Frugal syntax highlighting
+pygmentsCodeFences = true                   # should be true; enables Github-style code fences
+pygmentsCodeFencesGuessSyntax = false       # should be false; has never worked properly 
+pygmentsStyle = ""                          # should be empty; Frugal ignores this setting
+#pygmentsOptions = "linenos=table"          # uncomment if you ALWAYS want linenos
+
+
+## DEMO SITE CONFIGURATION
+paginate = 5
 enableEmoji = true
 footnoteReturnLinkContents = "↑"
 
-copyright = "" # leave this blank to use the smart copyright in params.ample.copyright
+
+## PRIVACY CONFIGURATION (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy.disqus]
+    disable = false
+
+[privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = false
+    respectDoNotTrack = true
+    useSessionStorage = true
+
+[privacy.instagram]
+    disable = false
+    simple = true
+
+[privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = true
+
+[privacy.vimeo]
+    disable = false
+    simple = true
+
+[privacy.youtube]
+    disable = false
+    privacyEnhanced = true
 
 
-# syntax highlighting
-pygmentsCodeFences = true  # recommend True: enables Github-style code fences
-pygmentsCodeFencesGuessSyntax = false # recommend False: has never worked properly 
-pygmentsStyle = "" # recommend ""; will be ignored by Ample at any rate
-#pygmentsOptions = "linenos=table" # leave disabled unless you _always_ want linenos
-pygmentsUseClasses = true # recommend True: required for Ample syntax highlighting themes
+## LANGUAGES CONFIGURATION
+[languages.en]
+    weight = 0
+    languageName = "English"
+    title = "yawpitchroll"
+    copyright = "2019 Michael Morehouse"
+    description = "The electronic home of Michael Morehouse; coder, VFX pipeline expert, sometimes world-weary adventurer, and narrowboat skipper."
 
-paginate = 5
 
-[permalinks]
-    post = "/post/:slug/"
-
+## TAXONOMIES CONFIGURATION
 [taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
+    category = "categories"
+    series = "series"
+    tag = "tags"
 
+
+## RELATED POSTS CONFIGURATION
 [related]
-  threshold = 80
-  includeNewer = true
-  toLower = true
+    threshold = 80
+    includeNewer = true
+    toLower = true
 
 [[related.indices]]
-  name = "keywords"
-  weight = 100
+    name = "series"
+    weight = 100
 
 [[related.indices]]
-  name = "tags"
-  weight = 80
+    name = "keywords"
+    weight = 80
 
 [[related.indices]]
-  name = "date"
-  weight = 10
+    name = "tags"
+    weight = 60
 
-[params]
-    description = "A minimal AMP-compatible Hugo website"
-    post_navigation = true
+[[related.indices]]
+    name = "date"
+    weight = 10
 
-[params.ample.site]
+
+## NAVIGATION MENU CONFIGURATION
+[[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 1
+
+[[menu.main]]
+    name = "Categories"
+    url = "categories/"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 2
+
+
+## THEME-SPECIFIC CONFIGURATION
+[params.frugal.site]
     googleSiteVerificationID = "sBH5B-K8H5X_W-rkdiyd0K9FmhQLiqbEbGcrpEOUeTk"
 
-[params.ample.style]
-    syntaxHighlightMode = "" # choices are "light" and "dark", defaults to "light"
-    accentColor = "" # defaults to "#0379C4" 
+[params.frugal.style]
+    syntaxHighlightMode = "dark"                # choices are "light" and "dark", defaults to "light"
+    accentColor = ""                            # defaults to "#0379C4" 
 
-[params.ample.pages.home]
-    title = "" # defaults to "Home"
-    text = "" # defaults to "Enter"
-    link = "" # root link to return to, defaults to "posts" so /posts
+[params.frugal.pages.home]
+    link = "posts"
 
-[params.ample.pages.e404]
-    title = "" # defaults to .Title (ie "404 Page not found")
-    text = "" # defaults to "404, So Sorry"
-    link = "" # root link to return to, defaults to "posts" so /posts
+[params.frugal.pages.e404]
+    link = "posts"
 
-[params.ample.copyright]
-    start = "" # if not provided, current year only will be used, else {start}-{current}
-    rights = "" # defaults to "All Rights Reserved"
-    holder = "" # name of the copyright holder; no default value
-
-[params.ample.seo.facebook]
+[params.frugal.seo.facebook]
     appid = "169846159809380"
     admins = []
 
-[params.ample.author]
-    displayName = "Michael Morehouse"
-
-[params.ample.author.social]
+[params.frugal.author]
+    name = "Michael Morehouse"
     email = "yawpitch@yawpitchroll.com"
+
+[params.frugal.author.social]
     facebook = "yawpitch"
     github = "yawpitch"
     twitter = "yawpitchroll"
     linkedin = "yawpitchroll"
     reddit = "yawpitch"
 
-[params.ample.publisher.social]
-    facebook = "" # defaults to params.ample.author.social.facebook
+[params.frugal.publisher]
+    name = "yawpitchroll"
+    
+[params.frugal.publisher.social]
+    facebook = ""                           # publisher sameAs links for Structured Data
+    github = ""
+    twitter = ""
+    linkedin = ""
+    reddit = ""
 
-# Menu items for the top navbar and mobile-only sidebar
-[[menu.main]]
-    name = "Posts"
-    url = "/posts"
-    weight = 1
+[params.frugal.formspree]
+    email = "contact@yawpitchroll.com"      # enables the formspree "contact me" form
 
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 2
+[params.frugal.mailchimp]
+    server = "yawpitchroll.us20.list-manage.com"
+    userid = "80b359475ddf7e0c8b943a7c3"
+    audienceid = "90b062cd78"
 
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 2
-
-[[params.ample.social.links]]
+## SOCIAL LINKS IN FOOTER
+[[params.frugal.social.links]]
     name = "github"
     weight = 1
 
-[[params.ample.social.links]]
+[[params.frugal.social.links]]
     name = "twitter"
     weight = 2
 
-[[params.ample.social.links]]
+[[params.frugal.social.links]]
     name = "linkedin"
     weight = 3
 
-[[params.ample.social.links]]
-    name = "facebook"
+[[params.frugal.social.links]]
+    name = "reddit"
     weight = 4
 
-[[params.ample.social.links]]
-    name = "reddit"
-    weight = 5
 
-[[params.ample.social.share]]
+## POST SOCIAL SHARING CONFIGURATION
+[[params.frugal.social.share]]
     provider = "facebook"
     id = "169846159809380"
     weight = 1
 
-[[params.ample.social.share]]
+[[params.frugal.social.share]]
     provider = "twitter"
     weight = 2
     
-[[params.ample.social.share]]
+[[params.frugal.social.share]]
     provider = "linkedin"
     weight = 3
 
-[[params.ample.social.share]]
+[[params.frugal.social.share]]
     provider = "whatsapp"
     weight = 4
 

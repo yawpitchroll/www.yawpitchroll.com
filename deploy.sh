@@ -3,10 +3,14 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo --gc --minify # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
+
+# Delete intermediate images
+find png/ -iname "*_fill_gaussian_center_*" -delete
+
 # Add changes to git.
 git add .
 
