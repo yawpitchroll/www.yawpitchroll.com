@@ -1,0 +1,25 @@
+{
+  "name": "yawpitchroll.com",
+  "version": "1.0.0",
+  "description": "My personal website's contents.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yawpitchroll/www.yawpitchroll.com.git"
+  },
+  "author": "Michael Morehouse",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/yawpitchroll/www.yawpitchroll.com/issues"
+  },
+  "homepage": "https://github.com/yawpitchroll/www.yawpitchroll.com#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.2",
+    "postcss-normalize": "^7.0.1"
+  }
+}
