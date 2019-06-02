@@ -1,5 +1,5 @@
 ## BASIC SITE CONFIGURATION
-baseURL = "https://yawpitchroll.netlify.com/"
+baseURL = "https://yawpitchroll.com/"
 theme = "frugal"
 defaultContentLanguage = "en"
 
