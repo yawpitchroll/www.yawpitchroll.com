@@ -15,7 +15,7 @@ HUGO_VERSION = "0.55.6"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --ignoreCache --minify --buildFuture -b $DEPLOY_PRIME_URL --debug"
+command = "hugo --ignoreCache --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.55.6"
