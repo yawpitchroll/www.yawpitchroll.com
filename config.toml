@@ -145,8 +145,8 @@ footnoteReturnLinkContents = "↑"
     linkedin = ""
     reddit = ""
 
-[params.frugal.formspree]
-    email = "contact@yawpitchroll.com"      # enables the formspree "contact me" form
+[params.frugal.contactform]                 # configure the contact form
+    provider = "Netlify"
 
 [params.frugal.mailchimp]
     server = "yawpitchroll.us20.list-manage.com"
