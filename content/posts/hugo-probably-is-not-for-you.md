@@ -1,11 +1,10 @@
 +++
 title = "Hugo Probably Isn't For You"
-date = "2019-06-01"
+date = "2019-06-05"
 tags = ["hugo", "web"]
 categories = ["articles"]
 series = []
 slug = "Hugo Probably Is Not For You"
-draft = true
 +++
 
 ## Yes, It's Quick Enough to Break Your Neck
