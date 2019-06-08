@@ -4,7 +4,8 @@
   "description": "My personal website's contents.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf public && git submodule foreach 'rm -rf resources'",
+    "reset": "git submodule foreach 'git reset --hard HEAD'"
   },
   "repository": {
     "type": "git",
