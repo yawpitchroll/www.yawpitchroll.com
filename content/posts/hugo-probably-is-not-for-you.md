@@ -5,6 +5,7 @@ tags = ["hugo", "web"]
 categories = ["articles"]
 series = []
 slug = "Hugo Probably Is Not For You"
+summary = "It’s quick enough to break your neck. As it says on the proverbial box, the Hugo static site generator is fast. Written in Go, Hugo promises blistering speed that it certainly delivers, and I’ve got all the redness, pain, and burning discomfort needed to prove it. As I’m writing this – in Markdown, using Vim – all I have to do is save the file and the hugo --server process I’ve left running in the background will render to HTML and update my browser window by the time I can shift my eyes over to it."
 +++
 
 ## Yes, It's Quick Enough to Break Your Neck
