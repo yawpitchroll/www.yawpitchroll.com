@@ -32,7 +32,7 @@ Frankly it's been an _agonizing_ journey. Pray you do not repeat it. Read on, an
 
 ### A Bit of Background
 
-I am an experienced programmer, but I am **emphatically not** a _web_ programmer. Before finally deciding to build out [my personal site][home] as a home for my technical musings I'd only ever blogged with WYSIWYG tools like Tumblr, and then only sporadically. Professionally I mainly write backend and process automation code for the Visual Effects industry, so it's charitable to say that I've developed the UX/UI design chops of your average wild-born gibbon. The last _serious_ experience I had with HTML/CSS predated the Marvel Cinematic Universe, and let's just say there have been some plot developments since then.
+I am an experienced programmer, but I am **emphatically not** a _web_ programmer. Before finally deciding to build out [my personal site][home] as a home for my technical musings I'd only ever blogged with WYSIWYG tools like Tumblr, and then only sporadically. Professionally I mainly write back end and process automation code for the Visual Effects industry, so it's charitable to say that I've developed the UX/UI design chops of your average wild-born gibbon. The last _serious_ experience I had with HTML/CSS predated the Marvel Cinematic Universe, and let's just say there have been some plot developments since then.
 
   [home]: https://www.yawpitchroll.com "Visit my homepage"
 
@@ -58,11 +58,11 @@ After a fair amount of offline research I'd eventually narrowed down exactly wha
 
 Now, those nine criteria might seem like a lot -- and, in hindsight, maybe they were -- but really they can be boiled down to **deliverable**, **discoverable**, and **readable**, and since my visual needs are _pretty_ bare-bones they didn't seem like too much of an ask.
 
-Of course I'd quicky learn that some of these had natural, even insurmountable conflicts -- AMP would eventually be abandoned because it renders commenting and mailing list signup unfeasible, for instance, and social sharing and privacy don't exactly go hand in hand -- but I had _hope_.
+Of course I'd quickly learn that some of these had natural, even insurmountable conflicts -- AMP would eventually be abandoned because it renders commenting and mailing list sign up unfeasible, for instance, and social sharing and privacy don't exactly go hand in hand -- but I had _hope_.
 
 #### Step 2: Assess the Field
 
-Dynamic tools like Wordpress were obviously eliminated by my first criterion, so I set out to understand the options for static site generators, of which there are [many][generators]. Though I came across Hugo early in my research I _really_ didn't want to go in full bore on anything without reading up on the competition, so I set it aside for the moment.
+Dynamic tools like WordPress were obviously eliminated by my first criterion, so I set out to understand the options for static site generators, of which there are [many][generators]. Though I came across Hugo early in my research I _really_ didn't want to go in full bore on anything without reading up on the competition, so I set it aside for the moment.
 
   [generators]: https://myles.github.io/awesome-static-generators "See a list of Static Site Generators"
 
@@ -72,9 +72,9 @@ I tried to narrow the field by eliminating generators written in what were, to m
   [nikola]: https://getnikola.com/ "The Nikola static site generator"
   [hyde]: https://hyde.github.io/ "The Hyde static site generator"
 
-  [^1]: Hyde's own site looking different when served over http vs https didn't inspire confidence.
+  [^1]: Hyde's own site looking different when served over HTTP vs HTTPS didn't inspire confidence.
 
-Of course I also checked out [Jekyll][jekyll], the Ruby-written, Github Pages first class member; an extremely solid alternative that's polished enough to be on its third major release, with a community large enough to demand some level of stability, and which certainly seemed friendly enough. But I'm not _at all_ interested in Ruby, so lingering fear of having to get under the hood at least once, coupled with the -- by all accounts quite obvious -- speed differential, tipped the balance towards Hugo. Besides, Jeykll _felt_ long in the tooth, with some long unaddressed issues and theme showcases bloated by what certainly looked to me like a large amount of swine and only a few pearls. Even its own website seemed dated and rather dull, which added to the perception that it wasn't keeping up with the times.
+Of course I also checked out [Jekyll][jekyll], the Ruby-written, Github Pages first class member; an extremely solid alternative that's polished enough to be on its third major release, with a community large enough to demand some level of stability, and which certainly seemed friendly enough. But I'm not _at all_ interested in Ruby, so lingering fear of having to get under the hood at least once, coupled with the -- by all accounts quite obvious -- speed differential, tipped the balance towards Hugo. Besides, Jekyll _felt_ long in the tooth, with some long unaddressed issues and theme showcases bloated by what certainly looked to me like a large amount of swine and only a few pearls. Even its own website seemed dated and rather dull, which added to the perception that it wasn't keeping up with the times.
 
   [jekyll]: https://jekyllrb.com/ "The Jekyll static site generator"
 
@@ -102,7 +102,7 @@ What could go wrong?
   <cite>Head & Shoulders</cite>
 </blockquote>
 
-Maybe it was bad luck, maybe it was the winds of change, most likely it was an errant commit on the Ananke theme -- who knows? -- but on the fateful day I first did the [quickstart][quickstart] I rapidly and tenaciously made it all the way to the moment of truth, breathlessly ran `hugo server -D` and then, aching with anticipation, opened a browser window and pointed it at the localhost address conventiently displayed in the terminal. Where I found absolutely _bupkiss_ being served. Nada. A blank screen with an empty source file. Back in the terminal where I'd launched the command there were several warnings, but nothing that could obviously explain the error[^3].
+Maybe it was bad luck, maybe it was the winds of change, most likely it was an errant commit on the Ananke theme -- who knows? -- but on the fateful day I first did the [quickstart][quickstart] I rapidly and tenaciously made it all the way to the moment of truth, breathlessly ran `hugo server -D` and then, aching with anticipation, opened a browser window and pointed it at the localhost address conveniently displayed in the terminal. Where I found absolutely _bupkiss_ being served. Nada. A blank screen with an empty source file. Back in the terminal where I'd launched the command there were several warnings, but nothing that could obviously explain the error[^3].
 
   [^3]: As of the day I'm writing this running through the quickstart instructions does in fact work, though with a great many deprecation warnings. You'll end up with a site that looks nothing like the theme demo page, though; even the gargoylish top splash image doesn't load. 
 
@@ -114,7 +114,7 @@ Neither did the following _three_.
 
 #### The Agony of Teething
 
-Hugo is an open source project; as of right now its most recent [release][releases] is 0.55. Unlike Jekyll it hasn't yet reached a 1.0 release, and thus has made no promises about backwards compatability. And that's _fine_. Each of the themes is similarly an open source effort, typically -- though not always -- with a single developer who is very possibly the sole invested consumer as well. And so things have broken, _badly_. Which maybe is to be expected, in a project this immature.
+Hugo is an open source project; as of right now its most recent [release][releases] is 0.55. Unlike Jekyll it hasn't yet reached a 1.0 release, and thus has made no promises about backwards compatibility. And that's _fine_. Each of the themes is similarly an open source effort, typically -- though not always -- with a single developer who is very possibly the sole invested consumer as well. And so things have broken, _badly_. Which maybe is to be expected, in a project this immature.
 
 But for each and every one of these themes the "official" hosted demo of the theme appears to work fine, which gives a Hugo-newbie like me the impression that there are _many_ more out-of-the-box functional themes than there actually are.
 
@@ -146,7 +146,7 @@ sed -i 's/^themesDir/#themesDir/' config.toml
 
 These are required because the quickstart instructions had you rename the theme directory as you made the submodule, and the **themesDir** configuration key was set apparently as a hack to make the theme easier to test.
 
-These sorts of issues mostly derive from the various themes having been written at various stages in Hugo's _rapid_ evolution, and many of them have committed to old choices that no longer remain the best practice, or are now pending deprecation[^4]. One phylogentic tree of themes _requires_ content to be in `content/post` instead of `content/posts`, another will fall down if it's not the other way around.
+These sorts of issues mostly derive from the various themes having been written at various stages in Hugo's _rapid_ evolution, and many of them have committed to old choices that no longer remain the best practice, or are now pending deprecation[^4]. One phylogenetic tree of themes _requires_ content to be in `content/post` instead of `content/posts`, another will fall down if it's not the other way around.
 
   [^4]: Hence the warnings you'll see in the quickstart with Ananke, even with the fixes describe above.
 
