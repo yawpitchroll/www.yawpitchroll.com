@@ -4,7 +4,7 @@ date = "2019-07-28"
 tags = ["python", "learning"]
 categories = ["articles"]
 series = ["The Etymology of Python"]
-slug = "The 35 Words You Need to Python"
+aliases = ["posts/the-35-words-you-need-to-python/the-35-words-you-need-to-python/"]
 summary = "Let's face it, learning to _write_ computer programs is _hard_. Doing so involves picking up a lot of specialized skills and jargon, most of which is unfamiliar, and it also means cultivating a mental approach to the world that, at first, might seem downright _alien_. It's a long journey, but fluency starts with learning how to _read_ computer programs, and that _really_ shouldn't be so hard."
 
 +++
