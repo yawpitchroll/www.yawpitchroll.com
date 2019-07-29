@@ -26,7 +26,7 @@ To make that task a little easier I'm going to try, in this post and the ones th
 
   [^1]: There are 35 keywords as of Python 3.7, the current major version of the language as of the time of writing. New keywords are added quite rarely, and it's even more rare for keywords to be removed, but in whatever version you're on you can use `from keyword import kwlist; print(kwlist)` to view the current list.
 
-That's right; the entire vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 words. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic fluency in a non-programming language.
+That's right; the entire vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 words. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic _native_ fluency in a non-programming language.
 
 ### First, Some Conventions
 
@@ -38,7 +38,7 @@ KEYWORD
 : A reserved _word_ the meaning of which _cannot_ be changed by the user. We will visit all 35 of these in the next section of this article.
 
 OPERATOR
-: A reserved _symbol_ that indicates an action to be performed. For example, `=` is the _assignment_ OPERATOR and `+` is the _addition_ OPERATOR. There are quite a few others others, but we'll save them for the next post. A small number of KEYWORDs behave like OPERATORs, and I'll point those out below.
+: A reserved _symbol_ that indicates an action to be performed. For example, `=` is the _assignment_ OPERATOR and `+` is the _addition_ OPERATOR. There are quite a few others, but we'll save them for the next post. A small number of KEYWORDs behave like OPERATORs, and I'll point those out below.
 
 These are both provided by Python and you can't directly change their meaning, which means that they're somewhat inflexible. To do most work you'll need something more flexible, which is why Python gives you the ability to represent _anything_.
 
@@ -251,11 +251,11 @@ not EXPRESSION
 ```
 
 If `EXPRESSION` is considered {{< definition-relref "True" >}} then `not EXPRESSION` evaluates to {{< definition-relref "False" >}} and otherwise it evaluates to {{< definition-relref "True" >}}.
-
+    
 That can be easier to understand if you think of {{< definition-relref "not" >}} as working like the following _ternary_ {{< definition-relref "if" >}}:
 
 ```python
-True if EXPRESSION else False
+False if EXPRESSION else True
 ```
  
 {{< definition doclink="https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not">}}
