@@ -48,7 +48,7 @@ OBJECT
 That can be a bit abstract and hard to wrap your head around at this point, though. For now just know that OBJECTs tend to fall into three main categories.
 
 VALUE
-: An OBJECT that represents a single, concrete _thing_; for the purposes of this discussion what that thing actually _is_ is irrelevant, but as an example, `4` is a VALUE of the [**int**][int] (short for _integer_ type) and `hello` is a VALUE of the [**str**][str] (short for _string_) type. These are both examples of _primitive_ types, which have a single meaningful value, but there are also _composite_ types for describing things the meaning of which is defined by more than one _attribute_. A real-world example would be a square, which cannot be defined without both height and width. As you'll see below three special KEYWORDs all behave like VALUEs, though as before you cannot change their meaning.
+: An OBJECT that represents a single, concrete _thing_; for the purposes of this discussion what that thing actually _is_ is irrelevant, but as an example, `4` is a VALUE of the [**int**][int] (short for _integer_ type) and `hello` is a VALUE of the [**str**][str] (short for _string_) type. These are both examples of _primitive_ types, which have a single meaningful value, but there are also _composite_ types for describing things the meaning of which is defined by more than one _attribute_. A real-world example would be a rectangle, which cannot be defined without both height and width. As you'll see below three special KEYWORDs all behave like VALUEs, though as before you cannot change their meaning.
 
   [int]: https://docs.python.org/3/library/functions.html#int "Read about the int type"
   [str]: https://docs.python.org/3/library/functions.html#func-str "Read about the str type"
