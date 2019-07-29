@@ -1337,7 +1337,7 @@ In much modern programming though it's often necessary to interact with things t
 
   [asynchrony]: https://en.wikipedia.org/wiki/Asynchrony_(computer_programming) "Read about asynchrony"
 
-Asynchronous programming is an advanced topic that is fairly specialized, so using it is well outside the scope of this series. It's also quite a new addition to the language, and its usage has fluctuated from version to version. Rather than try to summarize those changed I'll just describe the very basics of using these keywords in Python 3.7 below. If, however, you're curious there's a quite good primer available [here][async-primer] that seems to be kept up to date.
+Asynchronous programming is an advanced topic that is fairly specialized, so using it is well outside the scope of this series. It's also quite a new addition to the language, and its usage has fluctuated from version to version. Rather than try to summarize those changed I'll just describe the very basics of using these keywords in Python 3.7 below. If, however, you're curious there's a [quite good async primer available here][async-primer] that seems to be kept up to date.
 
   [async-primer]: https://realpython.com/async-io-python/ "Read a primer on asynchronous programming in Python"
 
@@ -1406,7 +1406,7 @@ async def OUTER_COROUTINE():
 
 Which will pause the execution of the outer COROUTINE and wait until the called COROUTINE, eventually, returns control. Any VALUE returned by the called COROUTINE is passed through {{< definition-relref "await" >}}, so you can think of `await COROUTINE()` as an asynchronous EXPRESSION that will, _eventually_ evaluate to whatever the COROUTINE returns when called.
 
-Of course now that you've got the basics of doing asynchronous work down, how do you actually _perform_ such work? Well, as of Python 3.7 that still requires using functionality provided by the [asyncio][asyncio] module, the details of which are _well_ outside the scope of these articles. See the [primer][async-primer] I mentioned earlier for details.
+Of course now that you've got the basics of doing asynchronous work down, how do you actually _perform_ such work? Well, as of Python 3.7 that still requires using functionality provided by the [asyncio][asyncio] module, the details of which are _well_ outside the scope of these articles. See the [async primer][async-primer] I mentioned earlier for details.
 
   [asyncio]: https://docs.python.org/3/library/asyncio.html "Read about the asyncio module"
 
