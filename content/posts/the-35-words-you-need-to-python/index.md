@@ -314,7 +314,7 @@ is
 : A _binary_ OPERATOR that tests if the OBJECT on the left has the same [identity][identity] as the OBJECT on the right and then evaluates to either {{< definition-relref "True" >}} or {{< definition-relref "False" >}}.
 : Can be inverted by {{< definition-relref "not" >}} to become the {{< definition-relref "is not" "is" >}} operator.
 
-  [identity]: "https://en.wikipedia.org/wiki/Identity_(object-oriented_programming)" "Read about identity in programming"
+  [identity]: https://en.wikipedia.org/wiki/Identity_(object-oriented_programming) "Read about identity in programming"
 
 An Old English verb from the Germanic stem **_\*es-_**; it's the third person singular present indicative form of the word **_be_**, so it generally means "to be [a thing]". In Python its meaning is specific to _identity_, and implies something more like "to be [some unique thing]".
 {{< /definition >}}
