@@ -9,7 +9,7 @@ summary = "Let's face it, learning to _write_ computer programs is _hard_. Doing
 
 +++
 
-## In the Beginning, there were the Words
+## In the Beginning were Python's Keywords
 
 Let's face it, learning to _write_ computer programs is _hard_. Doing so involves picking up a lot of specialized skills and jargon, most of which is unfamiliar, and it also means cultivating a mental approach to the world that, at first, might seem downright _alien_. It's a long journey, but fluency starts with learning how to _read_ computer programs, and that _really_ shouldn't be so hard.
 
@@ -26,7 +26,7 @@ To make that task a little easier I'm going to try, in this post and the ones th
 
   [^1]: There are 35 keywords as of Python 3.7, the current major version of the language as of the time of writing. New keywords are added quite rarely, and it's even more rare for keywords to be removed, but in whatever version you're on you can use `from keyword import kwlist; print(kwlist)` to view the current list.
 
-That's right; the entire vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 words. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic _native_ fluency in a non-programming language.
+That's right; the entire vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 keywords. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic _native_ fluency in a non-programming language.
 
 ### First, Some Conventions
 
