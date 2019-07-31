@@ -48,13 +48,13 @@ OBJECT
 That can be a bit abstract and hard to wrap your head around at this point, though. For now just know that OBJECTs tend to fall into three main categories.
 
 VALUE
-: An OBJECT that represents a single, concrete _thing_; for the purposes of this discussion what that thing actually _is_ is irrelevant, but as an example, `4` is a VALUE of the [**int**][int] (short for _integer_ type) and `hello` is a VALUE of the [**str**][str] (short for _string_) type. These are both examples of _primitive_ types, which have a single meaningful value, but there are also _composite_ types for describing things the meaning of which is defined by more than one _attribute_. A real-world example would be a rectangle, which cannot be defined without both height and width. As you'll see below three special KEYWORDs all behave like VALUEs, though as before you cannot change their meaning.
+: An OBJECT that represents a single, concrete _thing_; for the purposes of this discussion what that thing actually _is_ is irrelevant, but as an example, `4` is a VALUE of the [**int**][int] (short for _integer_) type and `hello` is a VALUE of the [**str**][str] (short for _string_) type. These are both examples of _primitive_ types, which have a single meaningful value, but there are also _composite_ types for describing things the meaning of which is defined by more than one _attribute_. A real-world example would be a rectangle, which cannot be defined without both height and width. As you'll see below three special KEYWORDs all behave like VALUEs, though as before you cannot change their meaning.
 
   [int]: https://docs.python.org/3/library/functions.html#int "Read about the int type"
   [str]: https://docs.python.org/3/library/functions.html#func-str "Read about the str type"
 
 COLLECTION
-: An OBJECT that groups together or contains other OBJECTs; there are _many_ different types of COLLECTION in Python, but for the moment all we care about is that a COLLECTION _contains_ zero or more OBJECTs. For example the statement `[2, 3, 4]` creates a COLLECTION of the type [**list**][list] that holds three VALUEs inside of it. A COLLECTION can contain _any_ OBJECT, so you can _nest_ a COLLECTION inside another COLLECTION.
+: An OBJECT that groups together or contains other OBJECTs; there are _many_ different types of COLLECTIONs in Python, but for the moment all we care about is that a COLLECTION _contains_ zero or more OBJECTs. For example the statement `[2, 3, 4]` creates a COLLECTION of the type [**list**][list] that holds three VALUEs inside of it. A COLLECTION can contain _any_ OBJECT, so you can _nest_ a COLLECTION inside another COLLECTION.
 
   [list]: https://docs.python.org/3/library/stdtypes.html#list "Read about the list type"
 
@@ -66,7 +66,7 @@ CALLABLE
 It wouldn't be very efficient to type out the same OBJECT every time you needed to refer to it, though. It's often very helpful to be able to refer to things _indirectly_.
 
 NAME
-: Any word that _is not_ a KEYWORD, and that is used as an _alias_ to _refer to_ some specific OBJECT. Unlike a KEYWORD the meaning of a NAME _may_ change over the course of a program, which is why these are often -- if a little incorrectly -- thought of as _variables_. There are several ways to create new NAMEs (and one to destroy them), as we'll see below, but as a simple example in `number = 2` the _assignment_ OPERATOR **=** creates the NAME **number** and assigns it to refer to the VALUE **2**. When later that is followed by `number += 2`, however, the _augmented assignment_ operator **+=** will re-assign **number** to refer to **4**.
+: Any word that _is not_ a KEYWORD, and that is used as an _alias_ to _refer to_ some specific OBJECT. Unlike a KEYWORD the meaning of a NAME _may_ change over the course of a program, which is why these are often -- if a little incorrectly -- thought of as _variables_. There are several ways to create new NAMEs (and one to destroy them), as we'll see below, but as a simple example in `number = 2` the _assignment_ OPERATOR **=** creates the NAME **number** and assigns it to refer to the VALUE **2**. When later that is followed by `number += 2`, however, the _augmented assignment_ OPERATOR **+=** will re-assign **number** to refer to **4**.
 
 Now we've got all the simple building blocks defined and we can start organizing them into composite structures.
 
@@ -188,7 +188,7 @@ if EXPRESSION:
     STATEMENT
 ```
 
-Many situation are binary, though, and so you'll always want to take some fallback action if the condition is _not_ met:
+Many situations are binary, though, and so you'll always want to take some fallback action if the condition is _not_ met:
 
 ```python
 if EXPRESSION:
@@ -237,7 +237,7 @@ not
 : A _unary_ OPERATOR that inverts the _truth-value_ of whatever follows it, as in `not EXPRESSION`.
 : Can be used to invert the meaning of another KEYWORD; see {{< definition-relref "is not" "is" >}} and {{< definition-relref "not in" "is_in" >}} below.
 
-A Middle English adverb from the Old English _nawiht_, implying "nothing" or "zero". The general meaning today negates (or flips) the meaning of the word or phrase that follows it. Compare "I do have apples" to "I do **_not_** have apples". In programming, however, the specific meaning comes from [logical negation][not], and thus **_not_** negates true to false, and vice versa.
+A Middle English adverb from the Old English **_nawiht_**, implying "nothing" or "zero". The general meaning today negates (or flips) the meaning of the word or phrase that follows it. Compare "I do have apples" to "I do **_not_** have apples". In programming, however, the specific meaning comes from [logical negation][not], and thus **_not_** negates true to false, and vice versa.
 
   [not]: https://en.wikipedia.org/wiki/Negation "Read about logical negation"
 {{< /definition >}}
