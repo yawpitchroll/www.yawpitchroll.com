@@ -896,8 +896,10 @@ def
 : If used inside a {{< definition-relref "class" >}} defines a named _method_ instead, which is called using the `class.method()` syntax.
 : Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async def" "async" >}}, see below.
 
-A contraction of the word **_define_**, which comes via the Middle English **_deffinen_** from Old French and Latin roots. It's a verb that means "to specify or fix [the meaning of a word or phrase]". In Python it is used specifically to create a named subroutine. In other languages **_define_**, **_fn_**, **_fun_**, **_func_**, **_function_**, and **_let_** are often used instead.
+A contraction -- specifically a [final clipping][clipping] or [apocope][apocope] -- of the word **_define_**, which comes via the Middle English **_deffinen_** from Old French and Latin roots. It's a verb that means "to specify or fix [the meaning of a word or phrase]". In Python it is used specifically to create a named subroutine. In other languages **_define_**, **_fn_**, **_fun_**, **_func_**, **_function_**, and **_let_** are often used instead.
 
+  [clipping]: https://en.wikipedia.org/wiki/Clipping_(morphology)) "Read about clippings"
+  [apocope]: https://en.wikipedia.org/wiki/Apocope "Read about apocopes"
 {{< /definition >}}
 
 Because {{< definition-relref "def" >}} can be used to create arbitrarily complex CALLABLEs, it's going to require some explanation. Essentially it's used to create a new NAME that refers to a CALLABLE. In fact, from now on let's just use FUNCTION to mean exactly that:
@@ -914,9 +916,9 @@ def FUNCTION(NAME_A, NAME_B): STATEMENT
 FUNCTION = lambda NAME_A, NAME_B : STATEMENT
 ```
 
-And you'll see they're _very_ similar, except that the {{< definition-relref "def" >}} version can run an arbitrary number of STATEMENTs[^2].
+And you'll see they're _very_ similar, except that the {{< definition-relref "def" >}} version can run an arbitrary number of STATEMENTs[^3].
 
-  [^2]: Putting {{< definition-relref "def" >}} on a single line makes the equivalence with {{< definition-relref "lambda" >}} more obvious, but for the sake of readability don't do this very often.
+  [^3]: Putting {{< definition-relref "def" >}} on a single line makes the equivalence with {{< definition-relref "lambda" >}} more obvious, but for the sake of readability don't do this very often.
 
 These STATEMENTs will be executed within the _local scope_ of the function, meaning that _any_ NAME assigned _inside_ the function cannot be _directly_ seen or accessed  by any code _outside_ the function. In this example there are no such names, but there will be as soon as we change the _signature_ of the function:
 
