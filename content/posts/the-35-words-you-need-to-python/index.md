@@ -20,11 +20,16 @@ Let's face it, learning to _write_ computer programs is _hard_. Doing so involve
 
 One of the defining traits of the Python programming language is that it's _designed_ to be readable by humans. For the most part it fulfills that promise, however, after several years of helping others understand Python, I've come to realize that there's an important caveat to that statement; it's really only true for someone with a _significant_ and _specialized_ English-language vocabulary.
 
-The truth is you need enough mastery of the "rules" of English grammar and wordplay to recognize and understand, at a glance, words _written_ in English that _are not_ actually words you'll find in an English dictionary. Nonstandard terms like **def** (a _contraction_), **elif** (a _portmanteau_) and **nonlocal** (a _neologism_) all abound, so even for those with quite advanced _native_ English fluency the task of learning Python is very much like trying to learn a foreign language that's _slightly_ related to their native tongue. For those without that fluency learning Python is like learning a foreign language _inside_ a foreign language, and is therefore _far_ more difficult.
+The truth is you need enough mastery of the "rules" of English grammar and wordplay to recognize and understand, at a glance, words _written_ in English that _are not_ actually words you'll find in an English dictionary. Nonstandard terms like **def** (a _contraction_[^1]), **elif** (a _portmanteau_) and **nonlocal** (a _neologism_) all abound, so even for those with quite advanced _native_ English fluency the task of learning Python is very much like trying to learn a foreign language that's _slightly_ related to their native tongue. For those without that fluency learning Python is like learning a foreign language _inside_ a foreign language, and is therefore _far_ more difficult.
 
-To make that task a little easier I'm going to try, in this post and the ones that follow, to shed some light on the meaning of -- and a _little_ of the etymological history behind -- the fundamental units of Python fluency. In this first part we will start with the most basic of those units, Python's 35 _reserved keywords_[^1].
+  [^1]: Technically **def** is a [final clipping][clipping] or [apocope][apocope], a specific kind of contraction. English is hard enough already, so I'll use the more general term.
+  [clipping]: https://en.wikipedia.org/wiki/Clipping_(morphology)) "Read about clippings"
+  [apocope]: https://en.wikipedia.org/wiki/Apocope "Read about apocopes"
 
-  [^1]: There are 35 keywords as of Python 3.7, the current major version of the language as of the time of writing. New Python keywords are added quite rarely, and it's even more rare for keywords to be removed, but in whatever version you're on you can use `from keyword import kwlist; print(kwlist)` to view the current list.
+
+To make that task a little easier I'm going to try, in this post and the ones that follow, to shed some light on the meaning of -- and a _little_ of the etymological history behind -- the fundamental units of Python fluency. In this first part we will start with the most basic of those units, Python's 35 _reserved keywords_[^2].
+
+  [^2]: There are 35 keywords as of Python 3.7, the current major version of the language as of the time of writing. New Python keywords are added quite rarely, and it's even more rare for keywords to be removed, but in whatever version you're on you can use `from keyword import kwlist; print(kwlist)` to view the current list.
 
 That's right; the core vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 keywords. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic _native_ fluency in a non-programming language.
 
@@ -896,10 +901,7 @@ def
 : If used inside a {{< definition-relref "class" >}} defines a named _method_ instead, which is called using the `class.method()` syntax.
 : Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async def" "async" >}}, see below.
 
-A contraction -- specifically a [final clipping][clipping] or [apocope][apocope] -- of the word **_define_**, which comes via the Middle English **_deffinen_** from Old French and Latin roots. It's a verb that means "to specify or fix [the meaning of a word or phrase]". In Python it is used specifically to create a named subroutine. In other languages **_define_**, **_fn_**, **_fun_**, **_func_**, **_function_**, and **_let_** are often used instead.
-
-  [clipping]: https://en.wikipedia.org/wiki/Clipping_(morphology)) "Read about clippings"
-  [apocope]: https://en.wikipedia.org/wiki/Apocope "Read about apocopes"
+A contraction of the word **_define_**, which comes via the Middle English **_deffinen_** from Old French and Latin roots. It's a verb that means "to specify or fix [the meaning of a word or phrase]". In Python it is used specifically to create a named subroutine. In other languages **_define_**, **_fn_**, **_fun_**, **_func_**, **_function_**, and **_let_** are often used instead.
 {{< /definition >}}
 
 Because {{< definition-relref "def" >}} can be used to create arbitrarily complex CALLABLEs, it's going to require some explanation. Essentially it's used to create a new NAME that refers to a CALLABLE. In fact, from now on let's just use FUNCTION to mean exactly that:
