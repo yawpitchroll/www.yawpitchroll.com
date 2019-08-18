@@ -710,7 +710,7 @@ A verb borrowed from the Middle French **_excepter_** and Latin **_exceptus_**; 
 
 {{< definition >}}
 finally
-: Optionally _cleans up_ an exception handler BLOCK to provide a means of _always_ performing some action whether or not the EXCEPTION was handled. _Must_ follow any {{< definition-relref "except" >}} BLOCKS and the optional {{< definition-relref "else" >}} BLOCK, if present. If no {{< definition-relref "except" >}} BLOCK is present then {{< definition-relref "finally" >}} _must_ terminate the exception handler.
+: Optionally _cleans up_ an exception handler BLOCK to provide a means of _always_ performing some action whether or not the EXCEPTION was handled. _Must_ follow any {{< definition-relref "except" >}} BLOCKS that are present, as well as the optional {{< definition-relref "else" >}} BLOCK if that is also present. If no {{< definition-relref "except" >}} BLOCK is present then {{< definition-relref "finally" >}} _must_ terminate the exception handler.
 
 From the Middle English **_fynaly_** meaning "at the end or conclusion" or just "lastly". It implies the very last thing to do in a sequence, which is the meaning here as well.
 {{< /definition >}}
