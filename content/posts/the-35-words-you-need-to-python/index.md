@@ -33,7 +33,7 @@ To make that task a little easier I'm going to try, in this post and the ones th
 
 That's right; the core vocabulary of Python you actually _need_ to know to start to do meaningful work is just 35 keywords. It's not the smallest language, but it's _far_ from the largest, and just compare it to the roughly 10,000 words required to achieve basic _native_ fluency in a non-programming language.
 
-### First, Some Conventions
+### First, Some Conventions {#conventions}
 
 Python is what is known as a _statement_-oriented language; but what _is_ a statement? Well, for the purposes of this article we're just going to say that in Python a statement is a _single_ line of code that does _something_. _What_ it does, specifically, depends on the building blocks of that statement.
 
@@ -240,7 +240,7 @@ These are used for making meaningful comparisons between things based on their _
 {{< definition doclink="https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not">}}
 not
 : A _unary_ OPERATOR that inverts the _truth-value_ of whatever follows it, as in `not EXPRESSION`.
-: Can be used to invert the meaning of another KEYWORD; see {{< definition-relref "is not" "is" >}} and {{< definition-relref "not in" "is_in" >}} below.
+: Can be used to invert the meaning of another KEYWORD; see {{< definition-relref "is not" "#is" >}} and {{< definition-relref "not in" "#is_in" >}} below.
 
 A Middle English adverb from the Old English **_nawiht_**, implying "nothing" or "zero". The general meaning today negates (or flips) the meaning of the word or phrase that follows it. Compare "I do have apples" to "I do **_not_** have apples". In programming, however, the specific meaning comes from [logical negation][not], and thus **_not_** negates true to false, and vice versa.
 
@@ -317,7 +317,7 @@ This subtlety can catch you out when you find that `True or 1` evaluates to {{< 
 {{< definition doclink="https://docs.python.org/3/reference/expressions.html#is" >}}
 is
 : A _binary_ OPERATOR that tests if the OBJECT on the left has the same [identity][identity] as the OBJECT on the right and then evaluates to either {{< definition-relref "True" >}} or {{< definition-relref "False" >}}.
-: Can be inverted by {{< definition-relref "not" >}} to become the {{< definition-relref "is not" "is" >}} operator.
+: Can be inverted by {{< definition-relref "not" >}} to become the {{< definition-relref "is not" "#is" >}} operator.
 
   [identity]: https://en.wikipedia.org/wiki/Identity_(object-oriented_programming) "Read about identity in programming"
 
@@ -356,13 +356,13 @@ There _are_ however some special cases: for instance, {{< definition-relref "Tru
 
   [singleton]: https://en.wikipedia.org/wiki/Singleton_pattern "Read about the singleton pattern"
 
-For this reason the uses of {{< definition-relref "is" >}} are limited and specific, which is why you'll only rarely see {{< definition-relref "is" >}} and {{< definition-relref "is not" "is" >}} used in practice.
+For this reason the uses of {{< definition-relref "is" >}} are limited and specific, which is why you'll only rarely see {{< definition-relref "is" >}} and {{< definition-relref "is not" "#is" >}} used in practice.
 
 #### Membership testing operator(s)
 {{< definition doclink="https://docs.python.org/3/reference/expressions.html#membership-test-operations" >}}
 in
 : A _binary_ OPERATOR that tests if the OBJECT on the left is a member of the COLLECTION on the right and then evaluates to either {{< definition-relref "True" >}} or {{< definition-relref "False" >}}. Also known as Python's _inclusion operator_.
-: Can be inverted by {{< definition-relref "not" >}} to become the {{< definition-relref "not in" "in" >}} _exclusion operator_.
+: Can be inverted by {{< definition-relref "not" >}} to become the {{< definition-relref "not in" "#in" >}} _exclusion operator_.
 : Also used with {{< definition-relref "for" >}}, see below.
 
 A Middle English merger of the Old English words **_in_**, meaning "among", and **_inne_**, meaning "within" or "inside". The merged word has many usages and meanings, but the general sense here is from the prepositional form, which implies that some thing is contained within or inside some larger thing, as in "a page **_in_** a book" or "a book **_in_** a library". In Python it is specifically used for _membership testing_, when checking if an item is contained within a group of items.
@@ -380,7 +380,7 @@ Or to test if OBJECT is {{< definition-relref "not" >}} a member of CONTAINER:
 OBJECT not in CONTAINER
 ```
 
-It can be tempting to think you can use {{< definition-relref "is" >}} with {{< definition-relref "in" >}}, but that's invalid syntax. It helps to remember that since {{< definition-relref "is" >}}, {{< definition-relref "is not" "is" >}}, {{< definition-relref "in" >}}, and {{< definition-relref "not in" "in" >}} are all binary OPERATORs they _must_ have either an OBJECT or EXPRESSION on either side, _not_ another KEYWORD.
+It can be tempting to think you can use {{< definition-relref "is" >}} with {{< definition-relref "in" >}}, but that's invalid syntax. It helps to remember that since {{< definition-relref "is" >}}, {{< definition-relref "is not" "#is" >}}, {{< definition-relref "in" >}}, and {{< definition-relref "not in" "#in" >}} are all binary OPERATORs they _must_ have either an OBJECT or EXPRESSION on either side, _not_ another KEYWORD.
 
 ### Four Used to Loop
 
@@ -426,7 +426,7 @@ The {{< definition-relref "while" >}} is the most basic form of loop, but it's a
 {{< definition doclink="https://docs.python.org/3/reference/compound_stmts.html#the-for-statement" >}}
 for
 : Starts a loop BLOCK that will iterate _once_ over a COLLECTION, visiting every item in it.
-: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async for" "async" >}} loop, see below.
+: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async for" "#async" >}} loop, see below.
 
 An Old English word via the German **_für_** with a great many meanings; the general meaning is taken from a prepositional sense of "[performing an action] on behalf of [some thing]". In computing, though, the meaning is actually taken from the contraction of the word **_for_** with either **_every_** (meaning "each [item] in a group") or **_each_** (meaning "all [of a group]") to form **_for every_** or **_for each_**, both of which mean "[to perform an action] on behalf of each item [in a group]". In programming languages that descend from ALGOL [**_for_**][for] has traditionally been the most common name for such a loop, with **_do_** used in a smaller number of languages. Python takes the name from the traditional usage in ALGOL via C, however it is more accurate to describe Python's version as a [**_foreach_**][foreach] loop, because there is no explicit counter and the thing being looped over must be [_iterable_][iteration].
 
@@ -899,7 +899,7 @@ The _named_ function builds on the ideas of the {{< definition-relref "lambda" >
 def
 : Used to define a _named_ function and its _signature_, the indented BLOCK that follows can then be re-used by calling that NAME using the `function()` syntax.
 : If used inside a {{< definition-relref "class" >}} defines a named _method_ instead, which is called using the `class.method()` syntax.
-: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async def" "async" >}}, see below.
+: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async def" "#async" >}}, see below.
 
 A contraction of the word **_define_**, which comes via the Middle English **_deffinen_** from Old French and Latin roots. It's a verb that means "to specify or fix [the meaning of a word or phrase]". In Python it is used specifically to create a named subroutine. In other languages **_define_**, **_fn_**, **_fun_**, **_func_**, **_function_**, and **_let_** are often used instead.
 {{< /definition >}}
@@ -995,7 +995,7 @@ What you'll notice is that {{< definition-relref "return" >}} _terminates_ a fun
 {{< definition doclink="https://docs.python.org/3/reference/simple_stmts.html#the-yield-statement" >}}
 yield
 : Used to immediately pause execution and temporarily give up control at the point at which it is encountered. If followed by an EXPRESSION, that is evaluated first and the resulting OBJECT is yielded back to the caller of the function; if no EXPRESSION is present {{< definition-relref "None" >}} is yielded instead. Has no meaning outside a function, thus if present at all it _must_ be used inside a BLOCK that follows a {{< definition-relref "def" >}}.
-: Can be modified by {{< definition-relref "from" >}} to form {{< definition-relref "yield from" "yield" >}}, see below.
+: Can be modified by {{< definition-relref "from" >}} to form {{< definition-relref "yield from" "#yield" >}}, see below.
 
 Etymologically the oddest word in this list; derives from the Middle English **_yielden_** and the Old English **_gieldan_**, both of which mean "to pay", and share their root with the Old Norse **_gjald_** and the German **_geld_**, both of which mean "money". Today **_geld_** means an ancient form of compelled tax or ransom, but it also means "to castrate". Historically the Dangeld was a tax raised on the English by their king. This tax was raised to pay waves of Danish Vikings to, presumably, not castrate the English (or, at the very least, their king). None of this is directly important here, but might explain a little of why the meaning in computing derives from both "to give way and relinquish control", as in "**_yield_** to oncoming traffic", and "to give back [a result or return on investment]" as in "the fund has a **_yield_** of 5% per year". In both cases the implication is that the situation is not yet final, and is likely recurring: you **_yield_**, then you wait, then you **_yield_** again.
 
@@ -1151,7 +1151,7 @@ del test[:]         # deletes all items
 
 We'll leave a further exploration of this for when we discuss the _builtin_ types in later articles. In the meantime, let's finally meet the keyword that will let you start defining such type-specific behaviors for yourself.
 
-### One for Defining New Types of Object
+### One for Defining New Types of Object {#newtypes}
 
 Up until this point I've been pretty vague about what an OBJECT actually is. In the [Object-Oriented Programming][oop] paradigm, also known as OOP, an object is, basically, a _thing_ that has both _state_ (in the form of named _attributes_) and _behavior_ (in the form of callable _methods_). Two individual things of the same _type_ may have different specific values for those attributes -- we call them different _instances_ of the same _type_ -- but they share the same overall _interface_. However there's a bit more to it than that; the programmer should be able to define partial interfaces, which we'll call _traits_, that types with similar needs can implement in different ways, such that they all share some common attributes and behaviors (a property known as [_polymorphism_][polymorphism]). Additionally these traits should be able to be passed from more generic types to more specific types via an [inheritance][inheritance] mechanism, much as a parent passes on traits to their children.
 
@@ -1271,7 +1271,7 @@ Unless the language you're working in provides a convenient means of ensuring th
 {{< definition doclink="https://docs.python.org/3/reference/compound_stmts.html#the-with-statement" >}}
 with
 : Starts a [_context manager_][context-manager] BLOCK, which ensures that the indented STATEMENT(s) below it are performed within the context of the OBJECT being managed.
-: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async with" "async" >}}, see below.
+: Can also be marked with {{< definition-relref "async" >}}, to start an {{< definition-relref "async with" "#async" >}}, see below.
 
   [context-manager]: https://docs.python.org/3/reference/datamodel.html#context-managers "Read about context managers in Python"
 
@@ -1350,9 +1350,9 @@ Because asynchronous code does the same work as synchronous code, but _schedules
 {{< definition doclink="https://docs.python.org/3/reference/compound_stmts.html#coroutine-function-definition" >}}
 async
 : Used to mark another KEYWORD as one that works asynchronously. As such, {{< definition-relref "async" >}} _cannot_ appear on its own.
-: With {{< definition-relref "def" >}} as {{< definition-relref "async def" "async" >}} to define an asynchronous function, also known as a COROUTINE.
-: With {{< definition-relref "for" >}} as {{< definition-relref "async for" "async" >}} to loop over an _asynchronous iterator_ inside an {{< definition-relref "async def" "async" >}}.
-: With {{< definition-relref "with" >}} as {{< definition-relref "async with" "async" >}} to use an _asynchronous context manager_ inside an {{< definition-relref "async def" "async" >}}, see below.
+: With {{< definition-relref "def" >}} as {{< definition-relref "async def" "#async" >}} to define an asynchronous function, also known as a COROUTINE.
+: With {{< definition-relref "for" >}} as {{< definition-relref "async for" "#async" >}} to loop over an _asynchronous iterator_ inside an {{< definition-relref "async def" "#async" >}}.
+: With {{< definition-relref "with" >}} as {{< definition-relref "async with" "#async" >}} to use an _asynchronous context manager_ inside an {{< definition-relref "async def" "#async" >}}, see below.
 
 As you may have guessed, this is a contraction of the Modern English word **_asynchronous_**, which is formed by combining the Latin roots **_a-_** ("not") and **_syn-_** ("together") with **_Khronus_**, the Ancient Greek personification of _time_. It unambiguously means "not occurring at the same time". In Python it more specifically marks an operation as "not occurring in the same time as the caller", which allows the caller to wait for the result of that operation, which will occur at _some_ point in the future.
 {{< /definition >}}
@@ -1370,9 +1370,9 @@ async def COROUTINE():
     STATEMENT
 ```
 
-Both of the other forms of {{< definition-relref "async" >}} exist to allow you to work _within_ a COROUTINE with _other_ COROUTINEs, and thus they can only exist _inside_ an {{< definition-relref "async def" "async" >}}.
+Both of the other forms of {{< definition-relref "async" >}} exist to allow you to work _within_ a COROUTINE with _other_ COROUTINEs, and thus they can only exist _inside_ an {{< definition-relref "async def" "#async" >}}.
 
-For instance you can use {{< definition-relref "async for" "async" >}} to loop over an [asynchronous iterator][async-iter] such as a GENERATOR COROUTINE (which is simply a COROUTINE that uses {{< definition-relref "yield" >}} instead of {{< definition-relref "return" >}}).
+For instance you can use {{< definition-relref "async for" "#async" >}} to loop over an [asynchronous iterator][async-iter] such as a GENERATOR COROUTINE (which is simply a COROUTINE that uses {{< definition-relref "yield" >}} instead of {{< definition-relref "return" >}}).
 
   [async-iter]: https://docs.python.org/3/reference/datamodel.html#asynchronous-iterators "Read about asynchronous iterators"
 
@@ -1382,7 +1382,7 @@ async def COROUTINE():
         STATEMENT
 ```
 
-You can also use {{< definition-relref "async with" "async" >}} to perform work within the context of an [asynchronous context manager][async-with]:
+You can also use {{< definition-relref "async with" "#async" >}} to perform work within the context of an [asynchronous context manager][async-with]:
 
   [async-with]: https://docs.python.org/3/reference/datamodel.html#asynchronous-context-managers "Read about asynchronous context managers"
 
@@ -1392,16 +1392,16 @@ async def COROUTINE():
         STATEMENT
 ```
 
-Virtually every COROUTINE will need to wait on other COROUTINE(s), which is why there's another keyword that can only be used within an {{< definition-relref "async def" "async" >}}.
+Virtually every COROUTINE will need to wait on other COROUTINE(s), which is why there's another keyword that can only be used within an {{< definition-relref "async def" "#async" >}}.
 
 {{< definition doclink="https://docs.python.org/3/reference/expressions.html#await-expression" >}}
 await
-: Used to suspend the execution of the COROUTINE it is found _within_ and waits for the COROUTINE to its right to complete; can only be used inside an {{< definition-relref "async def" "async" >}}.
+: Used to suspend the execution of the COROUTINE it is found _within_ and waits for the COROUTINE to its right to complete; can only be used inside an {{< definition-relref "async def" "#async" >}}.
 
 From the Middle English verb **_awaiten_** ("to wait for") from the Old French **_awaitier_**/**_agaitier_** ("to lie in wait for, watch, or observe"). The general sense is more active and hostile than **_wait_**, which it's a modification of. In asynchronous programming it means to "[suspend execution] and wait [for something to finish]".
 {{< /definition >}}
 
-The {{< definition-relref "await" >}} keyword is always going to be used to call a COROUTINE inside an {{< definition-relref "async def" "async" >}}:
+The {{< definition-relref "await" >}} keyword is always going to be used to call a COROUTINE inside an {{< definition-relref "async def" "#async" >}}:
 
 ```python
 async def OUTER_COROUTINE():
