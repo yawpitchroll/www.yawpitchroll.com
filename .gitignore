@@ -1,2 +1,9 @@
 resources/
 public/
+
+# Lock file added in 0.89.0
+.hugo_build.lock
+
+# Local node files
+node_modules
+package-lock.json
