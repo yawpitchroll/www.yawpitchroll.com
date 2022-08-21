@@ -1,0 +1,17 @@
+{{- $op := .Get 0 -}}
+{{- $name := index .Site.Data.operators.to_name $op -}}
+{{- $args := dict "Word" $op -}}
+{{- $anchor := anchorize $name -}}
+{{- $anchor_title := T "definition_anchor_title" $args -}}
+{{- $content := printf "%s %s" $name .Inner | markdownify -}}
+{{- $old := printf "<dt>%s</dt>" $name -}}
+{{- $new := printf "<dt id=\"%s\"><a class=\"symbol\" href=\"#%s\" title=\"%s\">%s</a></dt>" $anchor $anchor $anchor_title $op -}}
+{{- with .Get "doclink" -}}
+{{- $doclink_text := T "definition_doclink_text" $args -}}
+{{- $doclink_title := T "definition_doclink_title" $args | default $doclink_text -}}
+{{- $new = replace $new "</a></dt>" (printf "</a> <a class=\"doclink\" href=\"%s\" title=\"%s\">%s</a></dt>" . $doclink_title $doclink_text) -}}
+{{- end -}}
+{{- $content = replace $content $old $new -}}
+{{- $content = printf "%s</div>" (replace $content "</dl>" "</dl><div class=\"errata\">") -}}
+{{- $content = replace $content "<div class=\"errata\"></div>" "" -}}
+{{ printf "<div class=\"definition\">%s</div>" $content | safeHTML }}
