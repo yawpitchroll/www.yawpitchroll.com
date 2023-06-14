@@ -5,7 +5,7 @@ defaultContentLanguage = "en"
 
 
 ## ANALYTICS CONFIGURATION
-googleAnalytics = "UA-30240801-1"
+googleAnalytics = "G-4F1X8EW1W7"
 
 
 ## SYNTAX HIGHLIGHTING CONFIGURATION
@@ -56,6 +56,8 @@ footnoteReturnLinkContents = "↑"
     languageName = "English"
     title = "yawpitchroll"
     copyright = "2019 Michael Morehouse"
+
+[languages.en.params]
     description = "The electronic home of Michael Morehouse; coder, VFX pipeline expert, sometimes world-weary adventurer, and, currently, narrowboat skipper."
 
 
